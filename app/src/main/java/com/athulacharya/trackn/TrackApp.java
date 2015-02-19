@@ -4,6 +4,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class TrackApp extends ActionBarActivity {
@@ -35,5 +37,12 @@ public class TrackApp extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private int n = 0;
+    public void addN(View view) {
+        n += 10;
+        TextView textView = (TextView) findViewById(R.id.tracked_int);
+        textView.setText(Integer.toString(n));
     }
 }
