@@ -23,7 +23,9 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_action_new"
         android:contentDescription="@string/addN"
-        android:onClick="addN"
         />
+    <!-- android:onClick="addN"
+    this was the problem
+    TODO: fix -->
 
 </LinearLayout>
