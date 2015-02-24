@@ -20,7 +20,6 @@ public class TrackWidgetProvider extends AppWidgetProvider {
             Intent intent = new Intent(context, AddNDialogActivity.class);
             // Make it a standalone dialog
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            //TODO: WHats this do, and should the last arg be zero?
             PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
             // Get the widget layout and attach an on-click listener to the button
