@@ -1,7 +1,14 @@
 package com.athulacharya.trackn;
 
-/**
- * Created by aacharya on 2/24/15.
- */
-public class AddNDialogActivity {
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Window;
+
+public class AddNDialogActivity extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.dialog_addn);
+    }
 }

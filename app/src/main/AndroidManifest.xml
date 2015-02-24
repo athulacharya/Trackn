@@ -29,5 +29,13 @@
                 android:resource="@xml/track_widget_info" />
         </receiver>
 
+        <activity
+            android:name=".AddNDialogActivity"
+            android:label="AddNDialog"
+            android:noHistory="true"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Dialog">
+        </activity>
+
     </application>
 </manifest>
