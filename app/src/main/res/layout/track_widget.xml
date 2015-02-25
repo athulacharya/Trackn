@@ -3,8 +3,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#999999"
+    android:layout_height="wrap_content"
+    android:paddingLeft="3dp"
+    android:background="#e0e0e0"
+    android:theme="@android:style/Theme.DeviceDefault.Light"
     >
 
     <TextView
@@ -14,7 +16,7 @@
         android:layout_weight="1"
         android:text="@string/zero"
         android:textSize="35sp"
-        android:gravity="center_vertical|start"
+        android:layout_gravity="center_vertical"
         />
 
     <ImageButton
