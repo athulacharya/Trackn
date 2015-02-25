@@ -20,7 +20,7 @@
 
         <receiver
             android:name=".TrackWidgetProvider"
-            android:label="TrackN" >
+            android:label="AAAAAATrackN" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
