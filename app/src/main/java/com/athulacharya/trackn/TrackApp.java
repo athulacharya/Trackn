@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 public class TrackApp extends Activity {
 
+    public static final String DATA_FILE="TracknDataFile";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +41,4 @@ public class TrackApp extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    private int n = 0;
-    public void addN(View view) {
-        n += 10;
-        TextView textView = (TextView) findViewById(R.id.tracked_int);
-        textView.setText(Integer.toString(n));
-    }
 }
