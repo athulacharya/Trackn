@@ -8,6 +8,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+
 
 public class TrackWidgetConfigure extends Activity {
 
@@ -30,6 +33,20 @@ public class TrackWidgetConfigure extends Activity {
         // Set default return intent in case user backs out
         Intent resultValue = new Intent();
         setResult(RESULT_CANCELED, resultValue);
+
+        int googlePlayStatus = GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
+        if(googlePlayStatus != ConnectionResult.SUCCESS) {
+            GooglePlayServicesUtil.getErrorDialog(googlePlayStatus, this, 0).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // Right now the only way to get here is from a Google Play failure
+        // So we just fail gracefully
+        Intent resultValue = new Intent();
+        setResult(RESULT_CANCELED, resultValue);
+        finish();
     }
 
     public void cleanup(View view) {
