@@ -48,4 +48,10 @@ public class TrackWidgetProvider extends AppWidgetProvider {
         super.onUpdate(context, appWidgetManager, appWidgetIds);
     }
 
+    public static void updateWidget(int appWidgetId, Context context) {
+        Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE, null, context, TrackWidgetProvider.class);
+        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, new int[] {appWidgetId});
+        context.sendBroadcast(intent);
+    }
+
 }

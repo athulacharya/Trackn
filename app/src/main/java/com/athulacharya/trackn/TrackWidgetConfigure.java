@@ -33,12 +33,7 @@ public class TrackWidgetConfigure extends Activity {
     }
 
     public void cleanup(View view) {
-        // Tell the widget to update
-        // TODO: Refactor the important code in onUpdate into a static method, which is basically what I'm using it as
-        // TODO: Change in AddNDialogActivity too
-        TrackWidgetProvider twp = new TrackWidgetProvider();
-        int[] ids = {appWidgetId};
-        twp.onUpdate(this, AppWidgetManager.getInstance(this), ids);
+        TrackWidgetProvider.updateWidget(appWidgetId, this);
 
         // Send return intent
         Intent resultValue = new Intent();

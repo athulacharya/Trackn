@@ -54,11 +54,8 @@ public class AddNDialogActivity extends Activity {
         editor.putInt(Integer.toString(appWidgetId), N + plusN);
         editor.commit();
 
-        // Tell the widget to update
-        TrackWidgetProvider twp = new TrackWidgetProvider();
-        int[] ids = {appWidgetId};
-        twp.onUpdate(this, AppWidgetManager.getInstance(this), ids);
-
+        // Tell the widget to update and bounce
+        TrackWidgetProvider.updateWidget(appWidgetId, this);
         finish();
     }
 }
