@@ -24,6 +24,7 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/track_widget_info" />
@@ -36,6 +37,14 @@
             android:excludeFromRecents="true"
             android:windowSoftInputMode="stateVisible"
             android:theme="@android:style/Theme.DeviceDefault.Light.Dialog">
+        </activity>
+
+        <activity
+            android:name=".TrackWidgetConfigure"
+            android:label="@string/title_activity_track_widget_configure" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
         </activity>
 
     </application>
